@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:terkuma/global_variables.dart';
 import 'package:terkuma/home_page.dart';
 import 'package:terkuma/product_details_page.dart';
 
@@ -20,6 +21,8 @@ class MyApp extends StatelessWidget {
           seedColor: const Color.fromRGBO(254, 206, 1, 1),
           primary: const Color.fromRGBO(254, 206, 1, 1),
         ),
+        appBarTheme: const AppBarTheme(
+            titleTextStyle: TextStyle(fontSize: 20, color: Colors.black)),
         inputDecorationTheme: const InputDecorationTheme(
           hintStyle: TextStyle(
             fontWeight: FontWeight.bold,
@@ -28,16 +31,24 @@ class MyApp extends StatelessWidget {
           prefixIconColor: Color.fromRGBO(119, 119, 119, 1),
         ),
         textTheme: const TextTheme(
-            titleMedium: TextStyle(
-              fontSize: 20,
-              fontWeight: FontWeight.bold,
-            ),
-            bodySmall: TextStyle(
-              fontWeight: FontWeight.bold,
-              fontSize: 16,
-            )),
+          titleLarge: TextStyle(
+            fontWeight: FontWeight.bold,
+            fontSize: 35,
+          ),
+          titleMedium: TextStyle(
+            fontSize: 20,
+            fontWeight: FontWeight.bold,
+          ),
+          bodySmall: TextStyle(
+            fontWeight: FontWeight.bold,
+            fontSize: 16,
+          ),
+        ),
+        useMaterial3: true,
       ),
-      home: const ProductDetailsPage(),
+      home: ProductDetailsPage(
+        product: products[0],
+      ),
     );
   }
 }
