@@ -16,7 +16,8 @@ class CartPage extends StatelessWidget {
           final cartItem = cart[index];
           return ListTile(
             leading: CircleAvatar(
-              backgroundImage: ,
+              backgroundImage: AssetImage(cartItem['imageURL'] as String),
+              radius: 45,
             ),
             title: Text(
               cartItem['title'].toString(),
