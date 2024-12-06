@@ -39,7 +39,7 @@ class _HomePageState extends State<HomePage> {
                 Padding(
                   padding: EdgeInsets.all(20.0),
                   child: Text(
-                    "T.E.C.h_uma's \nCollection",
+                    "Cart's \nCollection",
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
                       fontSize: 35,
@@ -99,12 +99,15 @@ class _HomePageState extends State<HomePage> {
             Expanded(
               child: ListView.builder(
                 itemCount: products.length,
-                itemBuilder: (context, Index) {
-                  final product = products[Index];
+                itemBuilder: (context, index) {
+                  final product = products[index];
                   return ProductCard(
                     title: product['title'] as String,
                     price: product['price'] as double,
                     image: product['imageURL'] as String,
+                    backgroundColor: index.isEven
+                        ? const Color.fromRGBO(216, 240, 253, 1)
+                        : const Color.fromRGBO(245, 247, 249, 1),
                   );
                 },
               ),

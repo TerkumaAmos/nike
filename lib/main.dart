@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:terkuma/home_page.dart';
+import 'package:terkuma/product_details_page.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -36,7 +37,7 @@ class MyApp extends StatelessWidget {
               fontSize: 16,
             )),
       ),
-      home: const HomePage(),
+      home: const ProductDetailsPage(),
     );
   }
 }
