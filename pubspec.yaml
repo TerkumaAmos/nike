@@ -66,6 +66,10 @@ flutter:
     - assets/images/shoes 4.png
     - assets/images/shoes 5.png
     - assets/images/shoes 6.png
+    - assets/images/shoe 7.jpeg
+    - assets/images/shoe 8.jpeg
+    - assets/images/shoe 9.jpeg
+
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images
